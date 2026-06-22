@@ -4,7 +4,7 @@ const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const MODEL = 'openai/gpt-oss-20b:free';
 
 const getApiKey = (): string => {
-  const key = process.env.OPENROUTER_API_KEY;
+  const key = import.meta.env.VITE_OPENROUTER_API_KEY;
   if (!key) throw new Error("OPENROUTER_API_KEY environment variable is not set.");
   return key;
 };
